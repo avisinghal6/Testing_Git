@@ -704,7 +704,7 @@ class EmbeddingModel(ABC, _get_key_mixin):
     supports_text: bool = True
     supports_binary: bool = False
     batch_size: Optional[int] = None
-
+    #This is commit 2
     def _check(self, item: Union[str, bytes]):
         if not self.supports_binary and isinstance(item, bytes):
             raise ValueError(
