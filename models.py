@@ -724,6 +724,7 @@ class EmbeddingModel(ABC, _get_key_mixin):
         print("Hi I am tesing")
         return next(iter(self.embed_batch([item])))
 
+#This is commit 5
     def embed_multi(
         self, items: Iterable[Union[str, bytes]], batch_size: Optional[int] = None
     ) -> Iterator[List[float]]:
