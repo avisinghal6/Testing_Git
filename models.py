@@ -661,11 +661,6 @@ class Model(_BaseModel):
             stream,
         )
 
-
-class AsyncModel(_BaseModel):
-    def conversation(self) -> AsyncConversation:
-        return AsyncConversation(model=self)
-
     @abstractmethod
     async def execute(
         self,
