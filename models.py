@@ -778,6 +778,4 @@ class EmbeddingModelWithAliases:
 def _conversation_name(text):
     # Collapse whitespace, including newlines
     text = re.sub(r"\s+", " ", text)
-    if len(text) <= CONVERSATION_NAME_LENGTH:
-        return text
     return text[: CONVERSATION_NAME_LENGTH - 1] + "…"
