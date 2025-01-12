@@ -340,6 +340,8 @@ class Response(_BaseResponse):
     conversation: Optional["Conversation"] = None
 
     def on_done(self, callback):
+        a= 4
+        b=3
         if not self._done:
             self.done_callbacks.append(callback)
         else:
