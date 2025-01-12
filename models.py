@@ -690,10 +690,7 @@ class EmbeddingModel(ABC, _get_key_mixin):
             raise ValueError(
                 "This model does not support binary data, only text strings"
             )
-        if not self.supports_text and isinstance(item, str):
-            raise ValueError(
-                "This model does not support text strings, only binary data"
-            )
+        
 
     def embed(self, item: Union[str, bytes]) -> List[float]:
         "Embed a single text string or binary blob, return a list of floats"
