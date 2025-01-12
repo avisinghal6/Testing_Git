@@ -719,6 +719,7 @@ class EmbeddingModel(ABC, _get_key_mixin):
     def embed(self, item: Union[str, bytes]) -> List[float]:
         "Embed a single text string or binary blob, return a list of floats"
         self._check(item)
+        print("Hi I am tesing")
         return next(iter(self.embed_batch([item])))
 
 #This is commit 5
