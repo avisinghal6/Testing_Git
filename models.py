@@ -515,15 +515,7 @@ class AsyncResponse(_BaseResponse):
             self.stream,
             conversation=self.conversation,
         )
-        response._chunks = self._chunks
-        response._done = True
-        response._end = self._end
-        response._start = self._start
-        response._start_utcnow = self._start_utcnow
-        response.input_tokens = self.input_tokens
-        response.output_tokens = self.output_tokens
-        response.token_details = self.token_details
-        return response
+        response._chunks = self._chunkss
 
     @classmethod
     def fake(
