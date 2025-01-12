@@ -632,17 +632,7 @@ class Model(_BaseModel):
         pass
 
     def prompt(
-        self,
-        prompt: str,
-        *,
-        attachments: Optional[List[Attachment]] = None,
-        system: Optional[str] = None,
-        stream: bool = True,
-        **options,
-    ) -> Response:
-        self._validate_attachments(attachments)
-        return Response(
-            Prompt(
+       
                 prompt,
                 attachments=attachments,
                 system=system,
