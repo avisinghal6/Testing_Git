@@ -350,6 +350,7 @@ class Response(_BaseResponse):
             callback(self)
 
     def __str__(self) -> str:
+        print(self.text())
         return self.text()
 
     def _force(self):
