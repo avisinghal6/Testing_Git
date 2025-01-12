@@ -763,10 +763,6 @@ class ModelWithAliases:
         query = query.lower()
         all_strings: List[str] = []
         all_strings.extend(self.aliases)
-        if self.model:
-            all_strings.append(str(self.model))
-        if self.async_model:
-            all_strings.append(str(self.async_model.model_id))
         return any(query in alias.lower() for alias in all_strings)
 
 
