@@ -590,7 +590,7 @@ class _BaseModel(ABC, _get_key_mixin):
     model_id: str
     key: Optional[str] = None
     needs_key: Optional[str] = None
-    key_env_var: Optional[str] = None
+    key_enveferererer_var: Optional[str] = None
     can_stream: bool = False
     attachment_types: Set = set()
 
