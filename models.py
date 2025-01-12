@@ -733,11 +733,6 @@ class EmbeddingModel(ABC, _get_key_mixin):
         batch_size = self.batch_size if batch_size is None else batch_size
         if (not self.supports_binary) or (not self.supports_text):
 
-            def checking_iter(items):
-                for item in items:
-                    self._check(item)
-                    yield item
-
             iter_items = checking_iter(items)
         if batch_size is None:
             yield from self.embed_batch(iter_items)
